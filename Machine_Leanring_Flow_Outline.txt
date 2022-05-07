@@ -1,0 +1,27 @@
+dataset:
+nyc 2021_graduation_rates_pulic_schools
+
+What type of input data?
+Classification
+
+
+What type of data cleaning?
+Converting s to 0.
+Converting data types from object to integers.
+
+
+Feature Engineering Required
+1. PostgreSQL to store the data
+2. Python-JupyterNotebook-Pandas to clean the data
+3. Git to manage all our codes
+4. Tableau for initial data exploration
+5. Github Pages to store our Website
+6. JavaScript and HTML to display the charts
+7. TensorFlow for machine learning
+
+
+What is the Machine Learning Model
+Unsupervised
+
+
+Evaluation and Testing
