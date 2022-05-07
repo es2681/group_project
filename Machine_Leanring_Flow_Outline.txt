@@ -8,7 +8,7 @@ Classification
 What type of data cleaning?
 Converting s to 0.
 Converting data types from object to integers.
-
+Combineing 4 Year Cohorts, and 4+ Years Cohorts.
 
 Feature Engineering Required
 1. PostgreSQL to store the data
@@ -25,3 +25,8 @@ Unsupervised
 
 
 Evaluation and Testing
+Ranking schools based on graduation rates, 
+% Advanced regents of grads.
+Show the differences between econonimc disadvantaged students.
+Differences in Ethnicity and Gender.
+
