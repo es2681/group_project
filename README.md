@@ -11,7 +11,7 @@ We selected this topic because we felt it was important for the community to be 
 
 - The file includes all of the data for each public school in NYC from cohorts 2003 to 2017. 
 
-- The features that will be included in the modeling of the data are Cohort, %Grads, %Total Regents of Cohort, %Advanced Regents of Cohort, %Regents without Advanced of Cohort, %Dropout, SWD (Students with Disabilities), Ethnicity, Gender, Poverty.
+- The features that will be included in the modeling of the data are Category, Cohort Year, # Total Cohort, Cohort, %Grads, %Total Regents of Cohort, %Advanced Regents of Cohort, %Regents without Advanced of Cohort, %Dropout, SWD (Students with Disabilities), Ethnicity, Gender, Poverty.
 
 ### Questions to be answered:
 - In what ways can NYC Public Schools be classified? By what features are similar schools classified? 
