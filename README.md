@@ -19,3 +19,20 @@ We selected this topic because we felt it was important for the community to be 
 - How will classifying NYC Public Schools help parents decide where to live or where to send their children? 
 
 - How can classifying NYC Public Schools help districts identify which schools need more help?
+
+### Database Management
+
+Below you will see two images that show a skeleton of our database along with Entity Relationship Database. 
+
+- Database: 
+    - all_data: contains all the data
+    - ethnicity: breaks down the data base on ethnicity
+    - gender: breaks down the data base on gender
+    - poverty: breaks down the data base on income disadvnatages
+    - swd: breaks down the data baseds on students with disabilities or not
+
+- ERD:
+    - Has all 5 tables
+    - Shows that DBN is the primary key
+    - shows all the tables are connected to all_data based on DBN
+    - has columns we are considering using
