@@ -35,7 +35,11 @@ Below you will see two images that show a skeleton of our database along with En
     - poverty: breaks down the data base on income disadvnatages
     - swd: breaks down the data baseds on students with disabilities or not
 
+
 - ERD:
+
+![](https://github.com/es2681/student_analysis_project/blob/main/images/School_Analysis_ERD.png)
+
     - Has all 5 tables
     - Shows that DBN is the primary key
     - shows all the tables are connected to all_data based on DBN
