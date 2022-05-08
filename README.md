@@ -24,6 +24,7 @@ We selected this topic because we felt it was important for the community to be 
 
 Below you will see two images that show a skeleton of our database along with Entity Relationship Database. 
 
+![](https://github.com/es2681/student_analysis_project/blob/main/images/School_Analysis_Database.png)
 - Database: 
     - all_data: contains all the data
     - ethnicity: breaks down the data base on ethnicity
