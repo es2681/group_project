@@ -44,3 +44,12 @@ Below you will see two images that show a skeleton of our database along with En
     - Shows that DBN is the primary key
     - shows all the tables are connected to all_data based on DBN
     - has columns we are considering using
+
+## Technology
+1. PostgreSQL to store the data.
+2. Python-JupyterNotebook-Pandas to clean the data.
+3. Git to manage all our code.
+4. Tableau for initial data exploration.
+5. Github Pages to store our Website.
+6. JavaScript and HTML to display the charts.
+7. TensorFlow for machine learning.
