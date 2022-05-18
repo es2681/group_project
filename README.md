@@ -48,14 +48,28 @@ Below you will see two images that show a skeleton of our database along with En
     - shows all the tables are connected to all_data based on DBN
     - has columns we are considering using
 
+## Machine Learning Model
+- We are going to use K-Means unsupervised learning model to find similarities between schools.
+- Before we train our model, we will apply PCA to reduce dataset.
+- To estimate the K value, we are going to use "Elbow Curve"
+- Finally we will train our model using the sklearn library (KMeans).
+The initial input features are:
+- % Grads
+- % Total Regents of Cohort
+- % Advanced Regents of Cohort
+- % Dropout
+Expected Output features:
+- Ranking (performance) of schools
+
+
 ## Technology
 1. PostgreSQL to store the data.
 2. Python-JupyterNotebook-Pandas to clean the data.
 3. Git to manage all our code.
 4. Tableau for initial data exploration.
 5. Github Pages to store our Website.
-6. JavaScript and HTML to display the charts.
-7. TensorFlow for machine learning.
+6. JavaScript (Plotly) and HTML to display the charts.
+7. Sklearn (KMeans) library for the Machine Learning part.
 
 ## Dashboard Blueprint
 
