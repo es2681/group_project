@@ -56,3 +56,14 @@ Below you will see two images that show a skeleton of our database along with En
 5. Github Pages to store our Website.
 6. JavaScript and HTML to display the charts.
 7. TensorFlow for machine learning.
+
+## Dashboard Blueprint
+
+- Tools 
+    - HTML, CSS, and JavaScript for the whole dashboard 
+    - GeoJSON, D3, MapBox, and Leaflet for the mapping elements 
+    - D3 for 2 different dropdown menus 
+    - Plotly for the charts 
+
+- Interactive Elements 
+    - 2 dropdown menus using D3 will be included in order to choose the school and the year. A series of charts will appear according the user's choice. 
