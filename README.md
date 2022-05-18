@@ -62,7 +62,6 @@ Expected Output features:
 - Ranking (performance) of schools
 
 
-
 ## Technology
 1. PostgreSQL to store the data.
 2. Python-JupyterNotebook-Pandas to clean the data.
@@ -71,3 +70,14 @@ Expected Output features:
 5. Github Pages to store our Website.
 6. JavaScript (Plotly) and HTML to display the charts.
 7. Sklearn (KMeans) library for the Machine Learning part.
+
+## Dashboard Blueprint
+
+- Tools 
+    - HTML, CSS, and JavaScript for the whole dashboard 
+    - GeoJSON, D3, MapBox, and Leaflet for the mapping elements 
+    - D3 for 2 different dropdown menus 
+    - Plotly for the charts 
+
+- Interactive Elements 
+    - 2 dropdown menus using D3 will be included in order to choose the school and the year. A series of charts will appear according the user's choice. 
