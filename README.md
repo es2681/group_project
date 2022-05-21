@@ -7,6 +7,8 @@ Can a machine learning model adequately categorize whether an NYC public school 
 
 We will use publicly available NYC schools data, including the percentages of students with disabilities, students living in poverty, and students who pass the regents exams, as well as the distribution of various ethnicities and gender at each school, to categorize schools by their 4-year high school graduation rates as a "good" school or not. 
 
+A copy of the presentation can be found [here](https://docs.google.com/presentation/d/1Hy0tTfnzQk7wBHQD7KSvTr1mUrC9FzMkwlysQilIZLQ/edit?usp=sharing).
+
 ### Description of source data:
 - This data comes from the [New York City Department of Education Website](https://infohub.nyced.org/reports/academics/graduation-results).
 
