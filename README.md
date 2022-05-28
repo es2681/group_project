@@ -27,6 +27,8 @@ A copy of the presentation can be found [here](https://docs.google.com/presentat
 
 ### Database Management
 
+## Segement 1:
+
 Below you will see two images that show a skeleton of our database along with Entity Relationship Database. 
 
 
@@ -49,6 +51,20 @@ Below you will see two images that show a skeleton of our database along with En
     - Shows that DBN is the primary key
     - shows all the tables are connected to all_data based on DBN
     - has columns we are considering using
+
+## Segment 2:
+
+Now that the data has been added to the database, PS_School_Analysis, we have to clean it, so that it can show the data we want. Some tables were easy to clean/alter and join via SQL, except for the following tables:
+
+- Ethnicity table
+- Poverty table
+- SWD (student with disabilities)
+
+If we were to use SQL to clean/alter data, we would have duplicate results, making it complex to clean. As an alternative, we decided to do a data clean up via Pandas. Before loading our dataset, we used SQL to create a skeleton of how our table will look once we used a JOIN statement. Later, tables above were first loaded onto our Jupyter notebook and then we indicated which columns we wanted to keep. We then removed all DBN, School_Name, and Cohort_Year duplicates. The results we wanted populated and then saved under “transformed_XXX_table.
+
+Our Ethnicity table was by far a more complexed table to clean and set up through SQL. The only way to get our table into our database was to connect our database with pandas via SQLAlchemy. Once SQLAlchemy was running, we imported our cleaned ethnicities data and created a table in our database (see image in images folder)
+
+    
 
 ## Machine Learning Model
 - We are going to use K-Means unsupervised learning model to find similarities between schools.
