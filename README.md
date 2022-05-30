@@ -25,25 +25,9 @@ A copy of the presentation can be found [here](https://docs.google.com/presentat
 
 - How can classifying NYC Public Schools help districts identify which schools need more help?
 
-### Data Exploration
-- We used Excel, Python-JupyterNotebook-Pandas, to explore and clean the data. In our initial exploration we noticied that there were many null values and values with an 's' which meant that is was purposely surpressed by the NYCDOE so our first priority was to decide what to do with these values. We also needed to change the datatype of the columns and merge five different tables in order to get all of the data into one dataframe. 
+### Database Management
 
-### Analysis
-- Since we decided on an unsupervised machine learning model to classify the schools, after we recieved the classifications from the model, we needed to decied what they meant so using Excel we explored the data and filtered the dataframe based on the class to see if there were any common trends in the input values. We also created box and whisker charts for each class and each input value to check for the ditribution and for outliers. 
-
-### Technologies, Languaages, Tools and Algorithms
-1. PostgreSQL to store the data.
-2. Python-JupyterNotebook-Pandas to clean the data.
-3. Git to manage the code.
-4. JavaScript (Plotly) and HTML to display the charts.
-5. Github Pages to store our Website.
-6. Sklearn (KMeans) library for the Machine Learning Model.
-
-
-
-## Database Management
-
-### Segement 1:
+## Segement 1:
 
 Below you will see two images that show a skeleton of our database along with Entity Relationship Database. 
 
@@ -68,7 +52,7 @@ Below you will see two images that show a skeleton of our database along with En
     - shows all the tables are connected to all_data based on DBN
     - has columns we are considering using
 
-### Segment 2:
+## Segment 2:
 
 Now that the data has been added to the database, PS_School_Analysis, we have to clean it, so that it can show the data we want. Some tables were easy to clean/alter and join via SQL, except for the following tables:
 
@@ -83,19 +67,41 @@ Our Ethnicity table was by far a more complexed table to clean and set up throug
     
 
 ## Machine Learning Model
-- We are going to use K-Means unsupervised learning model to find similarities between schools.
-- Before we train our model, we will apply PCA to reduce dataset.
-- To estimate the K value, we are going to use "Elbow Curve"
-- Finally we will train our model using the sklearn library (KMeans).
-The initial input features are:
+We want to determine which school are the better schools. So we decided to use a k-means cluster to tier rank the schools.
+Based on the data we had we determines that only a few metrics provided really tell us how well a school is preforming.
+![Pic4](https://github.com/es2681/student_analysis_project/blob/main/images/all_data_table.png)
+The key metrics:
 - % Grads
 - % Total Regents of Cohort
 - % Advanced Regents of Cohort
 - % Dropout
+![Pic3](https://github.com/es2681/student_analysis_project/blob/main/images/Inital_input_features.png)
+The rest of the columns were dropped.
+To create our data clusters we need to reduce our key metrics using PCA. 
+![Pic1](https://github.com/es2681/student_analysis_project/blob/main/images/School_PCA.png)
+Check our data loss, fortunately we are only reducing 4 columns of data to 3 so we do not much data is lost. 
+![Pic5](https://github.com/es2681/student_analysis_project/blob/main/images/Accurcay_score.png)
+- Accuracy Score: 98.11%
+Then we determine how many groups is best by using an Elbow Curve, which determined to be 3.
+![Pic2](https://github.com/es2681/student_analysis_project/blob/main/images/Elbow_curve.png)
+Finally we will train our model using the sklearn library (KMeans).
+![Pic6](https://github.com/es2681/student_analysis_project/blob/main/images/School_analysis_with_class.png)
+Plot data, colors showing groups.
+![Pic7](https://github.com/es2681/student_analysis_project/blob/main/images/School_analysis_KMeans_Scatter.png)
 Expected Output features:
-- Ranking (performance) of schools
+- Tier ranking the classes based on preformance.
 
 
+
+
+## Technology
+1. PostgreSQL to store the data.
+2. Python-JupyterNotebook-Pandas to clean the data.
+3. Git to manage all our code.
+4. Tableau for initial data exploration.
+5. Github Pages to store our Website.
+6. JavaScript (Plotly) and HTML to display the charts.
+7. Sklearn (KMeans) library for the Machine Learning part.
 
 ## NYC Public School Classification Dashboard 
 
