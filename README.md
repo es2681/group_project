@@ -89,13 +89,8 @@ Expected Output features:
 6. JavaScript (Plotly) and HTML to display the charts.
 7. Sklearn (KMeans) library for the Machine Learning part.
 
-## Dashboard Blueprint
+## Dashboard 
 
-- Tools 
-    - HTML, CSS, and JavaScript for the whole dashboard 
-    - GeoJSON, D3, MapBox, and Leaflet for the mapping elements 
-    - D3 for 2 different dropdown menus 
-    - Plotly for the charts 
-
-- Interactive Elements 
-    - 2 dropdown menus using D3 will be included in order to choose the school and the year. A series of charts will appear according the user's choice. 
+[Link to Dashboard]
+![https://github.com/AmairaniR/school_dashboard/blob/main/images/dashboard_pic1.png]
+![https://github.com/AmairaniR/school_dashboard/blob/main/images/dashboard_pic2.png]
