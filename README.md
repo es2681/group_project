@@ -79,7 +79,7 @@ The key metrics:
 The rest of the columns were dropped.
 To create our data clusters we need to reduce our key metrics using PCA. 
 ![](https://github.com/es2681/student_analysis_project/blob/main/images/School_PCA.PNG)
-Check our data loss, fortunately we are only reducing 4 columns of data to 3 so we do not much data is lost. 
+- Check our data loss, fortunately we are only reducing 4 columns of data to 3 so we do not much data is lost. 
 ![](https://github.com/es2681/student_analysis_project/blob/main/images/Accurcay_score.PNG)
 - Accuracy Score: 98.11%
 Then we determine how many groups is best by using an Elbow Curve, which determined to be 3.
@@ -88,8 +88,10 @@ Finally we will train our model using the sklearn library (KMeans).
 ![](https://github.com/es2681/student_analysis_project/blob/main/images/School_analysis_with_class.PNG)
 Plot data, colors showing groups.
 ![](https://github.com/es2681/student_analysis_project/blob/main/images/School_Analysis_KMeans_Scatter.PNG)
-Expected Output features:
-- Tier ranking the classes based on preformance.
+- Data Output
+Based on the key metrics we determined that group 0 are the best schools, group 1 are average, and group 2 are the bad schools.
+The it seems that the KMeans model determined the best schools have a high % Advanced Regents of Cohort, this is supported by a school cohort in group 1 (the average schools) with a near perfect graduation rate, but a low % Advanced Regents of Cohort.
+What seems to spearate group 1 (average schools), and group 2 (bad schools) is a combination of drop out rate and low % Advanced Regents of Cohort. There are a few schools in group 1 with a low graduation rate, but has a few students in Advanced Regents, meanwhile majority of the schools in group 2 have no students in Advanced Regents, and if there are a substancial ammount of students in advanced regents the school has a high drop out rate.
 
 
 
