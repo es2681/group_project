@@ -67,17 +67,31 @@ Our Ethnicity table was by far a more complexed table to clean and set up throug
     
 
 ## Machine Learning Model
-- We are going to use K-Means unsupervised learning model to find similarities between schools.
-- Before we train our model, we will apply PCA to reduce dataset.
-- To estimate the K value, we are going to use "Elbow Curve"
-- Finally we will train our model using the sklearn library (KMeans).
-The initial input features are:
+We want to determine which school are the better schools. So we decided to use a k-means cluster to tier rank the schools.
+Based on the data we had we determines that only a few metrics provided really tell us how well a school is preforming.
+![Pic4](https://github.com/es2681/student_analysis_project/blob/main/images/all_data_table.png)
+The key metrics:
 - % Grads
 - % Total Regents of Cohort
 - % Advanced Regents of Cohort
 - % Dropout
+![Pic3](https://github.com/es2681/student_analysis_project/blob/main/images/Inital_input_features.png)
+The rest of the columns were dropped.
+To create our data clusters we need to reduce our key metrics using PCA. 
+![Pic1](https://github.com/es2681/student_analysis_project/blob/main/images/School_PCA.png)
+Check our data loss, fortunately we are only reducing 4 columns of data to 3 so we do not much data is lost. 
+![Pic5](https://github.com/es2681/student_analysis_project/blob/main/images/Accurcay_score.png)
+- Accuracy Score: 98.11%
+Then we determine how many groups is best by using an Elbow Curve, which determined to be 3.
+![Pic2](https://github.com/es2681/student_analysis_project/blob/main/images/Elbow_curve.png)
+Finally we will train our model using the sklearn library (KMeans).
+![Pic6](https://github.com/es2681/student_analysis_project/blob/main/images/School_analysis_with_class.png)
+
+Plot data, colors showing groups.
+![Pic7](https://github.com/es2681/student_analysis_project/blob/main/images/School_analysis_KMeans_Scatter.png)
+
 Expected Output features:
-- Ranking (performance) of schools
+- Ranking (performance) of school cohort.
 
 
 ## Technology
