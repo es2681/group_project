@@ -89,8 +89,16 @@ Expected Output features:
 6. JavaScript (Plotly) and HTML to display the charts.
 7. Sklearn (KMeans) library for the Machine Learning part.
 
-## Dashboard 
+## NYC Public School Classification Dashboard 
 
-[Link to Dashboard]
-![https://github.com/AmairaniR/school_dashboard/blob/main/images/dashboard_pic1.png]
-![https://github.com/AmairaniR/school_dashboard/blob/main/images/dashboard_pic2.png]
+[Link to Dashboard](https://amairanir.github.io/school_dashboard/)
+
+Image 1
+![](https://github.com/AmairaniR/school_dashboard/blob/main/images/dashboard_pic1.png)
+
+Image 1 shows the intial page of the dashboard which includes an interactive dropdown menu where the user can to see information on each school based on the year. They can also see a bar chart which shows the percent grads, percent total reents of cohort, percent advanced regents of cohort, and percent dropout which were the values used in the machine learning model. The user is also presented with four pie charts of demogrpahic information of the students for each school: ethnicities, gendere, economic advantage, and students with disabilities. 
+
+Image 2
+![](https://github.com/AmairaniR/school_dashboard/blob/main/images/dashboard_pic2.png)
+
+Image 2 shows how the dashboard changes when a different school or year is selected. Not only do the values of the bar chart and pie charts change, but the color of the bar chart changes depending on how it was classified from the unsupervised machine learning model. 
