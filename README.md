@@ -69,25 +69,25 @@ Our Ethnicity table was by far a more complexed table to clean and set up throug
 ## Machine Learning Model
 We want to determine which school are the better schools. So we decided to use a k-means cluster to tier rank the schools.
 Based on the data we had we determines that only a few metrics provided really tell us how well a school is preforming.
-![Pic4](https://github.com/es2681/student_analysis_project/blob/main/images/all_data_table.png)
+![](https://github.com/es2681/student_analysis_project/blob/main/images/All_data_table.PNG)
 The key metrics:
 - % Grads
 - % Total Regents of Cohort
 - % Advanced Regents of Cohort
 - % Dropout
-![Pic3](https://github.com/es2681/student_analysis_project/blob/main/images/Inital_input_features.png)
+![](https://github.com/es2681/student_analysis_project/blob/main/images/Inital_input_features.PNG)
 The rest of the columns were dropped.
 To create our data clusters we need to reduce our key metrics using PCA. 
-![Pic1](https://github.com/es2681/student_analysis_project/blob/main/images/School_PCA.png)
+![](https://github.com/es2681/student_analysis_project/blob/main/images/School_PCA.PNG)
 Check our data loss, fortunately we are only reducing 4 columns of data to 3 so we do not much data is lost. 
-![Pic5](https://github.com/es2681/student_analysis_project/blob/main/images/Accurcay_score.png)
+![](https://github.com/es2681/student_analysis_project/blob/main/images/Accurcay_score.PNG)
 - Accuracy Score: 98.11%
 Then we determine how many groups is best by using an Elbow Curve, which determined to be 3.
-![Pic2](https://github.com/es2681/student_analysis_project/blob/main/images/Elbow_curve.png)
+![](https://github.com/es2681/student_analysis_project/blob/main/images/Elbow_curve.PNG)
 Finally we will train our model using the sklearn library (KMeans).
-![Pic6](https://github.com/es2681/student_analysis_project/blob/main/images/School_analysis_with_class.png)
+![](https://github.com/es2681/student_analysis_project/blob/main/images/School_analysis_with_class.PNG)
 Plot data, colors showing groups.
-![Pic7](https://github.com/es2681/student_analysis_project/blob/main/images/School_analysis_KMeans_Scatter.png)
+![](https://github.com/es2681/student_analysis_project/blob/main/images/School_Analysis_KMeans_Scatter.PNG)
 Expected Output features:
 - Tier ranking the classes based on preformance.
 
