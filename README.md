@@ -25,9 +25,23 @@ A copy of the presentation can be found [here](https://docs.google.com/presentat
 
 - How can classifying NYC Public Schools help districts identify which schools need more help?
 
-### Database Management
+### Data Exploration
+- We used Excel, Python-JupyterNotebook-Pandas, to explore and clean the data. In our initial exploration we noticied that there were many null values and values with an 's' which meant that is was purposely surpressed by the NYCDOE so our first priority was to decide what to do with these values. We also needed to change the datatype of the columns and merge five different tables in order to get all of the data into one dataframe. 
 
-## Segement 1:
+### Analysis
+- Since we decided on an unsupervised machine learning model to classify the schools, after we recieved the classifications from the model, we needed to decied what they meant so using Excel we explored the data and filtered the dataframe based on the class to see if there were any common trends in the input values. We also created box and whisker charts for each class and each input value to check for the ditribution and for outliers. 
+
+### Technologies, Languaages, Tools and Algorithms
+1. PostgreSQL to store the data.
+2. Python-JupyterNotebook-Pandas to clean the data.
+3. Git to manage the code.
+4. JavaScript (Plotly) and HTML to display the charts.
+5. Github Pages to store our Website.
+6. Sklearn (KMeans) library for the Machine Learning Model.
+
+## Database Management
+
+### Segement 1:
 
 Below you will see two images that show a skeleton of our database along with Entity Relationship Database. 
 
@@ -52,7 +66,7 @@ Below you will see two images that show a skeleton of our database along with En
     - shows all the tables are connected to all_data based on DBN
     - has columns we are considering using
 
-## Segment 2:
+### Segment 2:
 
 Now that the data has been added to the database, PS_School_Analysis, we have to clean it, so that it can show the data we want. Some tables were easy to clean/alter and join via SQL, except for the following tables:
 
@@ -92,18 +106,6 @@ Plot data, colors showing groups.
 Based on the key metrics we determined that group 0 are the best schools, group 1 are average, and group 2 are the bad schools.
 The it seems that the KMeans model determined the best schools have a high % Advanced Regents of Cohort, this is supported by a school cohort in group 1 (the average schools) with a near perfect graduation rate, but a low % Advanced Regents of Cohort.
 What seems to spearate group 1 (average schools), and group 2 (bad schools) is a combination of drop out rate and low % Advanced Regents of Cohort. There are a few schools in group 1 with a low graduation rate, but has a few students in Advanced Regents, meanwhile majority of the schools in group 2 have no students in Advanced Regents, and if there are a substancial ammount of students in advanced regents the school has a high drop out rate.
-
-
-
-
-## Technology
-1. PostgreSQL to store the data.
-2. Python-JupyterNotebook-Pandas to clean the data.
-3. Git to manage all our code.
-4. Tableau for initial data exploration.
-5. Github Pages to store our Website.
-6. JavaScript (Plotly) and HTML to display the charts.
-7. Sklearn (KMeans) library for the Machine Learning part.
 
 ## NYC Public School Classification Dashboard 
 
