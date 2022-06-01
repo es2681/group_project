@@ -123,4 +123,4 @@ Image 2 shows the portion of the dashboard which includes an interactive dropdow
 Image 3
 ![](https://github.com/AmairaniR/school_dashboard/blob/main/images/dashboard_highest.png)
 
-Image 2 shows how the dashboard changes when a different school or year is selected. Not only do the values of the bar chart and pie charts change, but the color of the bar chart changes depending on how it was classified from the unsupervised machine learning model. 
+Image 3 shows how the dashboard changes when a different school or year is selected. Not only do the values of the bar chart and pie charts change, but the color of the bar chart changes depending on how it was classified from the unsupervised machine learning model. 
