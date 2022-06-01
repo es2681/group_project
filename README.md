@@ -25,7 +25,23 @@ A copy of the presentation can be found [here](https://docs.google.com/presentat
 
 - How can classifying NYC Public Schools help districts identify which schools need more help?
 
-### Database Management
+### Data Exploration
+- We used Excel, Python-JupyterNotebook-Pandas, to explore and clean the data. In our initial exploration we noticied that there were many null values and values with an 's' which meant that is was purposely surpressed by the NYCDOE so our first priority was to decide what to do with these values. We also needed to change the datatype of the columns and merge five different tables in order to get all of the data into one dataframe. 
+
+### Analysis
+- Since we decided on an unsupervised machine learning model to classify the schools, after we recieved the classifications from the model, we needed to decied what they meant so using Excel we explored the data and filtered the dataframe based on the class to see if there were any common trends in the input values. We also created box and whisker charts for each class and each input value to check for the ditribution and for outliers. 
+
+### Technologies, Languaages, Tools and Algorithms
+1. PostgreSQL to store the data.
+2. Python-JupyterNotebook-Pandas to clean the data.
+3. Git to manage the code.
+4. JavaScript (Plotly) and HTML to display the charts.
+5. Github Pages to store our Website.
+6. Sklearn (KMeans) library for the Machine Learning Model.
+
+## Database Management
+
+### Segement 1:
 
 Below you will see two images that show a skeleton of our database along with Entity Relationship Database. 
 
@@ -50,36 +66,57 @@ Below you will see two images that show a skeleton of our database along with En
     - shows all the tables are connected to all_data based on DBN
     - has columns we are considering using
 
+### Segment 2:
+
+Now that the data has been added to the database, PS_School_Analysis, we have to clean it, so that it can show the data we want. Some tables were easy to clean/alter and join via SQL, except for the following tables:
+
+- Ethnicity table
+- Poverty table
+- SWD (student with disabilities)
+
+If we were to use SQL to clean/alter data, we would have duplicate results, making it complex to clean. As an alternative, we decided to do a data clean up via Pandas. Before loading our dataset, we used SQL to create a skeleton of how our table will look once we used a JOIN statement. Later, tables above were first loaded onto our Jupyter notebook and then we indicated which columns we wanted to keep. We then removed all DBN, School_Name, and Cohort_Year duplicates. The results we wanted populated and then saved under “transformed_XXX_table.
+
+Our Ethnicity table was by far a more complexed table to clean and set up through SQL. The only way to get our table into our database was to connect our database with pandas via SQLAlchemy. Once SQLAlchemy was running, we imported our cleaned ethnicities data and created a table in our database (see image in images folder)
+
+    
+
 ## Machine Learning Model
-- We are going to use K-Means unsupervised learning model to find similarities between schools.
-- Before we train our model, we will apply PCA to reduce dataset.
-- To estimate the K value, we are going to use "Elbow Curve"
-- Finally we will train our model using the sklearn library (KMeans).
-The initial input features are:
+We want to determine which school are the better schools. So we decided to use a k-means cluster to tier rank the schools.
+Based on the data we had we determines that only a few metrics provided really tell us how well a school is preforming.
+![](https://github.com/es2681/student_analysis_project/blob/main/images/All_data_table.PNG)
+The key metrics:
 - % Grads
 - % Total Regents of Cohort
 - % Advanced Regents of Cohort
 - % Dropout
-Expected Output features:
-- Ranking (performance) of schools
+![](https://github.com/es2681/student_analysis_project/blob/main/images/Inital_input_features.PNG)
+The rest of the columns were dropped.
+To create our data clusters we need to reduce our key metrics using PCA. 
+![](https://github.com/es2681/student_analysis_project/blob/main/images/School_PCA.PNG)
+- Check our data loss, fortunately we are only reducing 4 columns of data to 3 so we do not much data is lost. 
+![](https://github.com/es2681/student_analysis_project/blob/main/images/Accurcay_score.PNG)
+- Accuracy Score: 98.11%
+Then we determine how many groups is best by using an Elbow Curve, which determined to be 3.
+![](https://github.com/es2681/student_analysis_project/blob/main/images/Elbow_curve.PNG)
+Finally we will train our model using the sklearn library (KMeans).
+![](https://github.com/es2681/student_analysis_project/blob/main/images/School_analysis_with_class.PNG)
+Plot data, colors showing groups.
+![](https://github.com/es2681/student_analysis_project/blob/main/images/School_Analysis_KMeans_Scatter.PNG)
+- Data Output
+Based on the key metrics we determined that group 0 are the best schools, group 1 are average, and group 2 are the bad schools.
+The it seems that the KMeans model determined the best schools have a high % Advanced Regents of Cohort, this is supported by a school cohort in group 1 (the average schools) with a near perfect graduation rate, but a low % Advanced Regents of Cohort.
+What seems to spearate group 1 (average schools), and group 2 (bad schools) is a combination of drop out rate and low % Advanced Regents of Cohort. There are a few schools in group 1 with a low graduation rate, but has a few students in Advanced Regents, meanwhile majority of the schools in group 2 have no students in Advanced Regents, and if there are a substancial ammount of students in advanced regents the school has a high drop out rate.
 
+## NYC Public School Classification Dashboard 
 
-## Technology
-1. PostgreSQL to store the data.
-2. Python-JupyterNotebook-Pandas to clean the data.
-3. Git to manage all our code.
-4. Tableau for initial data exploration.
-5. Github Pages to store our Website.
-6. JavaScript (Plotly) and HTML to display the charts.
-7. Sklearn (KMeans) library for the Machine Learning part.
+[Link to Dashboard](https://amairanir.github.io/school_dashboard/)
 
-## Dashboard Blueprint
+Image 1
+![](https://github.com/AmairaniR/school_dashboard/blob/main/images/dashboard_pic1.png)
 
-- Tools 
-    - HTML, CSS, and JavaScript for the whole dashboard 
-    - GeoJSON, D3, MapBox, and Leaflet for the mapping elements 
-    - D3 for 2 different dropdown menus 
-    - Plotly for the charts 
+Image 1 shows the intial page of the dashboard which includes an interactive dropdown menu where the user can to see information on each school based on the year. They can also see a bar chart which shows the percent grads, percent total reents of cohort, percent advanced regents of cohort, and percent dropout which were the values used in the machine learning model. The user is also presented with four pie charts of demogrpahic information of the students for each school: ethnicities, gendere, economic advantage, and students with disabilities. 
 
-- Interactive Elements 
-    - 2 dropdown menus using D3 will be included in order to choose the school and the year. A series of charts will appear according the user's choice. 
+Image 2
+![](https://github.com/AmairaniR/school_dashboard/blob/main/images/dashboard_pic2.png)
+
+Image 2 shows how the dashboard changes when a different school or year is selected. Not only do the values of the bar chart and pie charts change, but the color of the bar chart changes depending on how it was classified from the unsupervised machine learning model. 
