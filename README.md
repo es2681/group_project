@@ -3,7 +3,7 @@
 ## Presentation
 
 ### Topic: Classification of NYC Public Schools 
-Can a machine learning model adequately categorize whether an NYC public school is considered "good" with publicly available data? For this project, we are looking to answer this question. We selected this topic because we felt it was important for the community to be able to identify how the schools are classified in relation to one another so that they can make informed personal decisions for their children. In addition, districts would also be able to use this model to identify the characteristics which make for a high-quality school versus a low-quality school and make decisions based on the predictions. 
+Can a machine learning model adequately categorize whether a NYC public school is considered "good" with publicly available data? For this project, we are looking to answer this question. The group selected this topic because we felt it was important for the community to be able to identify how schools are classified in relation to one another so that they can make informed personal decisions for their children. In addition, districts would also be able to use this model to identify the characteristics which make for a high-quality school versus a low-quality school and make decisions based on the predictions. 
 
 We will use publicly available NYC schools data, including the percentages of students with disabilities, students living in poverty, and students who pass the regents exams, as well as the distribution of various ethnicities and gender at each school, to categorize schools by their 4-year high school graduation rates as a "good" school or not. 
 
@@ -41,7 +41,7 @@ A copy of the presentation can be found [here](https://docs.google.com/presentat
 
 ## Database Management
 
-### Segement 1:
+### Segment 1:
 
 Below you will see two images that show a skeleton of our database along with Entity Relationship Database. 
 
